@@ -17,7 +17,7 @@ async function run() {
     playground: true,
   })
 
-  app.use('*', cors())
+  app.options('*', cors())
   app.use(compression())
 
   server.applyMiddleware({ app, path: '/graphql' })
